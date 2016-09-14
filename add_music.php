@@ -15,7 +15,7 @@ if( isset($_FILES['music']) && !empty($_FILES['music']) &&
 			$filename = md5(uniqid(rand(), true));
 			$destination = "musics/{$filename}.{$_SESSION['id']}.{$ext}";
 
-			// TODO
+
 
 		} else {
 			$error = 'Erreur, le fichier n\'a pas une extension autorisée !';
