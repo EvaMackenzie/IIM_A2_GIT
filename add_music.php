@@ -15,7 +15,9 @@ if( isset($_FILES['music']) && !empty($_FILES['music']) &&
 		if (preg_match('/\.(mp3|ogg)$/i', $file['name'])) {
 			$filename = md5(uniqid(rand(), true));
 			$destination = "musics/{$filename}.{$_SESSION['id']}.{$ext}";
+
     move_uploaded_file ($file['xmusic'],$destination);// deplace destination
+
 		} else {
 			$error = 'Erreur, le fichier n\'a pas une extension autorisée !';
 
